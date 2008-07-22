@@ -1,5 +1,5 @@
 #
-# $Id$
+# $Id: 01_use.t 4065 2004-11-01 15:38:09Z james $
 #
 
 use strict;
@@ -14,7 +14,7 @@ BEGIN {
 }
 
 use_ok('List::Uniq');
-is($List::Uniq::VERSION, '0.10', 'check module version');
+is($List::Uniq::VERSION, '0.11', 'check module version');
 
 #
 # EOF

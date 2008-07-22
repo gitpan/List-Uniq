@@ -15,9 +15,11 @@ BEGIN {
 
 use_ok('List::Uniq', ':all');
 
-# simplest possible usage
-is_deeply scalar uniq('foo','foo'), [ 'foo' ],
-    'one of two duplicates removed';
+# rt.cpan.org #37837, reported by Peter Caffin
+# don't emit warnings on an undef element
+my @authors;
+is_deeply scalar uniq(undef), [undef],
+	'list with undef elements';
 
 #
 # EOF
