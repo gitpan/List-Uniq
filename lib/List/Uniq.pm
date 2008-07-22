@@ -1,5 +1,5 @@
 #
-# $Id: Uniq.pm 4065 2004-11-01 15:38:09Z james $
+# $Id: Uniq.pm 4355 2008-07-22 12:22:37Z james $
 #
 
 =head1 NAME
@@ -28,7 +28,7 @@ use base 'Exporter';
 use strict;
 use warnings;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 # set up exports
 our @EXPORT;
@@ -111,7 +111,7 @@ sub uniq
         if( $opts->{compare} ) {
             unless( 'CODE' eq ref $opts->{compare} ) {
                 require Carp;
-                Carp::croak "compare option is not a CODEREF";
+                Carp::croak("compare option is not a CODEREF");
             }
             @elements = sort { $opts->{compare}->($a,$b) } @_;
         }
