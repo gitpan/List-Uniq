@@ -1,5 +1,5 @@
 #
-# $Id: 08_flatten.t 4065 2004-11-01 15:38:09Z james $
+# $Id: 08_flatten.t 4496 2010-06-18 15:19:43Z james $
 #
 
 use strict;
